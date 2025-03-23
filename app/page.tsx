@@ -1,20 +1,16 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Linkedin } from "lucide-react";
-
 export default function RizzaKarenVeridianoSite() {
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans">
-      <header className="bg-green-900 text-white py-10 text-center">
+      <header className="bg-green-900 text-white py-10 text-center px-4">
         <h1 className="text-4xl font-bold">Rizza Karen Veridiano</h1>
         <p className="text-xl mt-2">Senior Manager | Natural Climate Solutions</p>
         <a
           href="https://www.linkedin.com/in/rizza-karen-veridiano/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 mt-4 text-sm underline"
+          className="inline-flex items-center justify-center gap-2 mt-4 text-sm underline"
         >
-          <Linkedin size={18} /> Connect on LinkedIn
+          Connect on LinkedIn ↗
         </a>
       </header>
 
@@ -32,7 +28,7 @@ export default function RizzaKarenVeridianoSite() {
 
       <section className="bg-gray-50 p-6">
         <h2 className="text-2xl font-semibold mb-4 text-center">Expertise</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {[
             "Carbon Project Development (ARR, IFM, REDD+)",
             "Blue Carbon & Mangroves Methodology",
@@ -43,11 +39,12 @@ export default function RizzaKarenVeridianoSite() {
             "Corporate Advisory on NBS",
             "Programme & Staff Management",
           ].map((item) => (
-            <Card key={item}>
-              <CardContent className="p-4 text-center text-sm font-medium">
-                {item}
-              </CardContent>
-            </Card>
+            <div
+              key={item}
+              className="bg-white shadow rounded-2xl p-4 text-center text-sm font-medium"
+            >
+              {item}
+            </div>
           ))}
         </div>
       </section>
